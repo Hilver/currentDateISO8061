@@ -13,11 +13,11 @@ const convertedDate = addHours => {
 
     const hours = addHours === undefined ?
         currentDate.getHours() :
-        estimatedHour > 24 ?
+        estimatedHour >= 24 ?
             estimatedHour % 24 :
             estimatedHour
 
-    const additionalDays = estimatedHour > 24 ?
+    const additionalDays = estimatedHour >= 24 ?
         Math.floor(estimatedHour / 24) :
         0
 
